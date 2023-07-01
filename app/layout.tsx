@@ -1,6 +1,7 @@
 import ClientOnly from './components/ClientOnly'
-import Modal from './components/modals/Modal'
+import RegisterModal from './components/modals/RegisterModal'
 import Navbar from './components/navbar/Navbar'
+import ToasterProvider from './providers/ToasterProvider'
 import './globals.css'
 
 export const metadata = {
@@ -17,7 +18,8 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <ClientOnly>
-          <Modal isOpen />
+          <ToasterProvider />
+          <RegisterModal />
           <Navbar />
         </ClientOnly>
         {children}
